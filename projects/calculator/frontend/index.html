@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="calculator">
+            <div class="display">
+                <input type="text" v-model="expression" readonly>
+                <div class="result">{{ result }}</div>
+            </div>
+            <div class="buttons">
+                <button @click="clear">C</button>
+                <button @click="appendChar('/')">÷</button>
+                <button @click="appendChar('*')">×</button>
+                <button @click="appendChar('-')">-</button>
+                
+                <button @click="appendChar('7')">7</button>
+                <button @click="appendChar('8')">8</button>
+                <button @click="appendChar('9')">9</button>
+                <button @click="appendChar('+')">+</button>
+                
+                <button @click="appendChar('4')">4</button>
+                <button @click="appendChar('5')">5</button>
+                <button @click="appendChar('6')">6</button>
+                <button @click="calculate">=</button>
+                
+                <button @click="appendChar('1')">1</button>
+                <button @click="appendChar('2')">2</button>
+                <button @click="appendChar('3')">3</button>
+                <button></button>
+                
+                <button @click="appendChar('0')" class="zero">0</button>
+                <button @click="appendChar('.')">.</button>
+                <button></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
